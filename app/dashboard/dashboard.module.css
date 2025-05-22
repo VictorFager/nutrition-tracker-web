@@ -1,0 +1,318 @@
+.dashboardContainer {
+  --title-text-size: 2rem;
+  --menu-item-text-size: 1.75rem;
+  --button-text-size: 1rem;
+  --standard-border-radius: 12px;
+  --button-border-radius: 8px;
+  --large-spacing: 40px;
+  --medium-spacing: 28px;
+  --small-spacing: 16px;
+  --menu-item-transition-length: 400ms;
+  --quick-fade-transition-length: 300ms;
+
+  background: var(--main-green);
+  height: 100vh;
+  display: flex;
+}
+
+/* SIDE NAVIGATION ================================= */
+
+.sideNavigation {
+  background: var(--bg-white);
+  outline: 3px solid var(--bg-gray);
+  /* border-right: 3px solid var(--bg-gray); */
+  border-radius: 0 var(--standard-border-radius) var(--standard-border-radius) 0;
+}
+
+.menuContent {
+  padding: var(--large-spacing) calc(var(--large-spacing) * 1.5)
+    var(--large-spacing) var(--large-spacing);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menuTitle {
+  font-size: var(--title-text-size);
+}
+
+.menuContent nav {
+  margin-top: var(--medium-spacing);
+  flex-grow: 1;
+}
+
+/* NAVIGATION MENU LINKS */
+
+.menuContent li {
+  margin-bottom: var(--small-spacing);
+}
+
+.menuLink {
+  font-size: var(--menu-item-text-size);
+  font-weight: 600;
+  transition: color var(--menu-item-transition-length) ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.menuLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: calc(var(--menu-item-text-size) * -0.25);
+  height: calc(var(--menu-item-text-size) * 0.12);
+  /* bottom: -0.4rem; */
+  /* height: 0.2rem; */
+  width: 100%;
+  background-color: var(--text-black);
+  transition: all var(--menu-item-transition-length) ease-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.menuLink:hover,
+.menuLink:focus {
+  color: var(--light-gray);
+  outline: none;
+}
+
+.menuLink:hover::after,
+.menuLink:focus::after {
+  background-color: var(--light-gray);
+  transform: scaleX(1);
+}
+
+.active.menuLink {
+  color: var(--main-green);
+}
+
+.active.menuLink::after {
+  background-color: var(--main-green);
+  transform: scaleX(1);
+}
+
+.active.menuLink:hover,
+.active.menuLink:focus {
+  color: var(--light-green);
+}
+
+.active.menuLink:hover::after,
+.active.menuLink:focus::after {
+  background-color: var(--light-green);
+}
+
+/* SELECT */
+
+.menuContent select {
+  font-size: 1rem;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  color: var(--text-black);
+  background-color: var(--bg-white);
+  padding: 0.25rem 0.5rem;
+  border: 2px solid var(--bg-gray);
+  border-radius: var(--button-border-radius);
+  transition: var(--quick-fade-transition-length) ease-in-out;
+}
+
+.menuContent select:hover,
+.menuContent select:focus {
+  border-color: var(--main-green);
+  cursor: pointer;
+  outline: none;
+}
+
+/* MAIN CONTENT ================================== */
+
+.mainContent {
+  padding-top: var(--medium-spacing);
+  padding-right: var(--medium-spacing);
+  padding-bottom: var(--medium-spacing);
+  padding-left: calc(
+    var(--medium-spacing) + 3px
+  ); /* 3px accounting for outline from sidemenu */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageTitle {
+  font-size: var(--title-text-size);
+  color: var(--bg-white);
+  margin-bottom: var(--small-spacing);
+}
+
+.pageContainer {
+  background-color: var(--bg-white);
+  width: 100%;
+  border-radius: var(--standard-border-radius);
+  /* outline: 4px solid var(--bg-gray); */
+  border: 3px solid var(--bg-gray);
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.pageContent {
+  overflow-y: auto;
+  height: 100%;
+}
+
+/* TOP BAR */
+
+.formBar {
+  margin: var(--small-spacing);
+  display: flex;
+}
+
+.formBar form:nth-child(1) {
+  flex-grow: 1;
+  position: relative;
+}
+
+.formBar form:nth-child(2) {
+  flex-grow: 0;
+}
+
+.formBar input {
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: var(--button-border-radius);
+  border: 3px solid var(--bg-gray);
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  width: 100%;
+  transition: var(--quick-fade-transition-length) ease-in-out;
+}
+
+.formBar input::placeholder {
+  color: var(--light-gray);
+}
+
+.formBar input:hover,
+.formBar input:focus {
+  border-color: var(--light-green);
+  outline: none;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: var(--text-black);
+  pointer-events: none;
+}
+
+.formBar button {
+  margin-left: var(--small-spacing);
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: var(--button-border-radius);
+  border: 3px solid var(--main-green);
+  background-color: var(--main-green);
+  color: var(--bg-white);
+  padding: 0.75rem 1.25rem;
+  transition: var(--quick-fade-transition-length) ease-in-out;
+}
+
+.formBar button:hover,
+.formBar button:focus {
+  background-color: var(--light-green);
+  border-color: var(--light-green);
+  cursor: pointer;
+  outline: none;
+}
+
+.tableHeaders {
+  background-color: var(--bg-gray);
+  display: flex;
+  color: var(--text-gray);
+  padding: 0.25rem var(--small-spacing);
+}
+
+.tableHeaders h3 {
+  font-weight: 400;
+}
+
+.nameHeader {
+  flex-grow: 1;
+}
+
+.dataHeader {
+  width: 6rem;
+  text-align: end;
+}
+
+.buttonSpacer {
+  width: 120px;
+}
+
+.tableItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem var(--small-spacing);
+  border-bottom: 3px solid var(--bg-gray);
+}
+
+.editButton {
+  display: flex;
+  padding: 0.5rem;
+  background-color: var(--bg-white);
+  color: var(--light-gray);
+  border: 2px solid var(--bg-gray);
+  border-radius: var(--button-border-radius);
+  margin-left: var(--small-spacing);
+  cursor: pointer;
+}
+
+.deleteButton {
+  display: flex;
+  padding: 0.5rem;
+  background-color: var(--bg-white);
+  color: var(--main-red);
+  border: 2px solid var(--light-red);
+  border-radius: var(--button-border-radius);
+  margin-left: var(--small-spacing);
+  cursor: pointer;
+}
+
+.doneButton {
+  display: flex;
+  padding: 0.5rem;
+  background-color: var(--bg-white);
+  color: var(--main-yellow);
+  border: 2px solid var(--light-yellow);
+  border-radius: var(--button-border-radius);
+  margin-left: var(--small-spacing);
+  cursor: pointer;
+}
+
+.nameData {
+  flex-grow: 1;
+}
+
+.valueData {
+  width: 6rem;
+  text-align: end;
+}
+
+.tableItem .deleteButton {
+  display: none;
+}
+
+.tableItem .doneButton {
+  visibility: hidden;
+}
+
+.editableTableItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem var(--small-spacing);
+  border-bottom: 3px solid var(--bg-gray);
+}
+
+.editableTableItem .editButton {
+  display: none;
+}

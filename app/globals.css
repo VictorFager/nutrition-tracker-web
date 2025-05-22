@@ -1,13 +1,16 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg-white: #f4f4f4;
+  --text-black: #292929;
+  --bg-gray: #e4e4e4;
+  --text-gray: #888888;
+  --light-gray: #aaaaaa;
+  --main-green: #6bd39d;
+  --light-green: #8ee4b8;
+  --gray-green: #aecebd;
+  --main-yellow: #de9114;
+  --light-yellow: #f2ae41;
+  --main-red: #e04237;
+  --light-red: #e86a61;
 }
 
 html,
@@ -17,11 +20,12 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-black);
+  background: var(--bg-white);
+  font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
 }
 
 * {
@@ -35,8 +39,15 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
 }
