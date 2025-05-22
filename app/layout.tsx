@@ -10,6 +10,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Nutrition Tracker",
   description: "An app to track your nutritional data",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

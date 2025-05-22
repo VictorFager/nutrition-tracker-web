@@ -1,4 +1,3 @@
-import SideNavigation from "@/components/side-navigation";
 import Link from "next/link";
 import styles from "./dashboard.module.css";
 import { LeafyGreen, Search, Pencil, Trash2, Check } from "lucide-react";
