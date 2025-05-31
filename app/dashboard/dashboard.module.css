@@ -1,16 +1,4 @@
 .dashboardContainer {
-  --title-text-size: 2rem;
-  --menu-item-text-size: 1.75rem;
-  --button-text-size: 1rem;
-  --standard-border-radius: 12px;
-  --button-border-radius: 8px;
-  --large-spacing: 40px;
-  --medium-spacing: 28px;
-  --small-spacing: 16px;
-  --menu-item-transition-length: 400ms;
-  --quick-fade-transition-length: 300ms;
-
-  background: var(--main-green);
   height: 100vh;
   display: flex;
 }

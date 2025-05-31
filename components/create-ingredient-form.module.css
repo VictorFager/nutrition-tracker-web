@@ -1,0 +1,130 @@
+.pageContent {
+  background-color: var(--bg-white);
+  border: 3px solid var(--bg-gray);
+  border-radius: var(--standard-border-radius);
+  margin: var(--large-spacing);
+  padding: var(--medium-spacing) var(--small-spacing);
+}
+
+.pageContent h2 {
+  font-size: var(--form-title-text-size);
+  margin-bottom: var(--small-spacing);
+}
+
+.inputContainer {
+  margin-bottom: 1rem;
+  position: relative;
+  flex-grow: 1;
+}
+
+.pageContent label {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.pageContent input {
+  display: block;
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  border-radius: var(--button-border-radius);
+  border: 3px solid var(--bg-gray);
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  width: 100%;
+  transition: var(--quick-fade-transition-length) ease-in-out;
+}
+
+.pageContent input:hover,
+.pageContent input:focus {
+  border-color: var(--light-green);
+  outline: none;
+}
+
+.inputError {
+  color: var(--light-red);
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-left: 3px;
+  margin-top: 0.5rem;
+}
+
+.formGroup {
+  display: flex;
+}
+
+/* .kcal input {
+  padding-right: 3rem;
+} */
+
+.inputMeasurement {
+  position: absolute;
+  right: 0.75rem;
+  top: 2.75rem;
+  pointer-events: none;
+}
+
+.spacer {
+  width: var(--small-spacing);
+}
+
+.generalError {
+  color: var(--light-red);
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-left: 3px;
+  margin-top: 0.5rem;
+}
+
+.generalSuccess {
+  color: var(--main-green);
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-left: 3px;
+  margin-top: 0.5rem;
+}
+
+.buttonGroup {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancelButton {
+  display: block;
+  border-radius: var(--button-border-radius);
+  border: 3px solid var(--bg-gray);
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  padding: 0.75rem 1.25rem;
+  transition: var(--quick-fade-transition-length) ease-in-out;
+}
+
+.cancelButton:hover,
+.cancelButton:focus {
+  border-color: var(--main-green);
+  outline: none;
+}
+
+.pageContent button {
+  font-family: var(--font-inter);
+  font-size: var(--button-text-size);
+  font-weight: 400;
+  border-radius: var(--button-border-radius);
+  border: 3px solid var(--main-green);
+  background-color: var(--main-green);
+  color: var(--bg-white);
+  padding: 0.75rem 1.25rem;
+  transition: var(--quick-fade-transition-length) ease-in-out;
+}
+
+.pageContent button:hover,
+.pageContent button:focus {
+  background-color: var(--light-green);
+  border-color: var(--light-green);
+  cursor: pointer;
+  outline: none;
+}
