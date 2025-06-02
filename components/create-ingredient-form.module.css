@@ -38,6 +38,10 @@
   transition: var(--quick-fade-transition-length) ease-in-out;
 }
 
+.pageContent input::placeholder {
+  color: var(--light-gray);
+}
+
 .pageContent input:hover,
 .pageContent input:focus {
   border-color: var(--light-green);

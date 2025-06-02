@@ -1,0 +1,70 @@
+.mainContainer {
+  margin: var(--large-spacing);
+}
+
+.searchContainer {
+  background-color: var(--bg-white);
+  border-radius: var(--standard-border-radius);
+  border: 3px solid var(--bg-gray);
+  padding: var(--medium-spacing);
+}
+
+.searchContainer input {
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: var(--button-border-radius);
+  border: 3px solid var(--bg-gray);
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: var(--quick-fade-transition-length) ease-in-out;
+}
+
+.searchContainer input::placeholder {
+  color: var(--light-gray);
+}
+
+.searchContainer input:hover,
+.searchContainer input:focus {
+  border-color: var(--light-green);
+  outline: none;
+}
+
+.listContainer {
+  border-radius: var(--button-border-radius);
+  border: 3px solid var(--bg-gray);
+  border-top: none;
+  overflow: hidden;
+  background-color: var(--bg-gray);
+}
+.searchContainer ul {
+  max-height: 30vh;
+  overflow-y: scroll;
+}
+
+.searchContainer li {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.searchContainer li button {
+  display: flex;
+  padding: 0.25rem;
+  margin-right: 0.5rem;
+  background-color: var(--bg-white);
+  color: var(--light-gray);
+  border: 2px solid var(--bg-gray);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+.calculatorContainer {
+  margin-top: var(--small-spacing);
+  background-color: var(--bg-white);
+  border-radius: var(--standard-border-radius);
+  border: 3px solid var(--bg-gray);
+  padding: var(--medium-spacing);
+}
