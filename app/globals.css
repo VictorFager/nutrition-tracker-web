@@ -32,6 +32,8 @@
 
   --menu-item-transition-length: 400ms;
   --quick-fade-transition-length: 300ms;
+
+  --bottom-navbar-height: 4.25rem;
 }
 
 html,

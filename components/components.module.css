@@ -1,9 +1,10 @@
 /* BOTTOM NAV ================================== */
 
 .bottomNav {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
+  height: var(--bottom-navbar-height);
   background-color: var(--bg-white);
   padding: var(--x-small-spacing);
   border-top: var(--standard-border-width) solid var(--bg-gray);
@@ -21,6 +22,10 @@
   display: flex;
   padding: var(--icon-button-padding);
   border-radius: var(--button-border-radius);
+}
+
+.iconLink:active {
+  background-color: var(--main-green);
 }
 
 .iconLink.active {
