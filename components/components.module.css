@@ -22,12 +22,14 @@
   display: flex;
   padding: var(--icon-button-padding);
   border-radius: var(--button-border-radius);
+  -webkit-tap-highlight-color: transparent; /* Removes blue highlight on phones */
+  transition: background-color 400ms ease-out, color 400ms ease-in-out;
 }
 
 .iconLink:active {
-  background-color: var(--main-green);
+  background-color: var(--bg-gray);
 }
 
 .iconLink.active {
-  background-color: var(--light-green);
+  color: var(--main-green);
 }
