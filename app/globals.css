@@ -1,11 +1,11 @@
 :root {
-  --bg-white: #f4f4f4;
+  --bg-white: #fafafa;
   --text-black: #292929;
   --bg-gray: #e4e4e4;
   --text-gray: #888888;
   --light-gray: #aaaaaa;
   --main-green: #6bd39d;
-  --light-green: #8ee4b8;
+  --light-green: #c0ecd5;
   --gray-green: #aecebd;
   --main-yellow: #de9114;
   --light-yellow: #f2ae41;
@@ -16,11 +16,20 @@
   --menu-item-text-size: 1.75rem;
   --form-title-text-size: 1.5rem;
   --button-text-size: 1rem;
+
   --standard-border-radius: 12px;
   --button-border-radius: 8px;
-  --large-spacing: 40px;
-  --medium-spacing: 28px;
-  --small-spacing: 16px;
+  --standard-border-width: 3px;
+
+  --x-small-spacing: 0.5rem;
+  --small-spacing: 1rem;
+  --medium-spacing: 1.75rem;
+  --large-spacing: 2.5rem;
+  --x-large-spacing: 3.5rem;
+
+  --button-padding: 0.75rem;
+  --icon-button-padding: 0.5rem;
+
   --menu-item-transition-length: 400ms;
   --quick-fade-transition-length: 300ms;
 }
@@ -28,6 +37,7 @@
 html,
 body {
   max-width: 100vw;
+  height: 100dvh;
   overflow-x: hidden;
 }
 
@@ -62,4 +72,14 @@ h4,
 h5,
 h6 {
   font-size: inherit;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* TEMPORARY !!!!!!!! TA BORT */
+p {
+  padding: 2rem;
 }

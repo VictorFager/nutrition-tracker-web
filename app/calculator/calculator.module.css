@@ -6,7 +6,11 @@
   background-color: var(--bg-white);
   border-radius: var(--standard-border-radius);
   border: 3px solid var(--bg-gray);
-  padding: var(--medium-spacing);
+  overflow: hidden;
+}
+
+.searchContainer form {
+  padding: var(--small-spacing);
 }
 
 .searchContainer input {
@@ -33,27 +37,28 @@
 }
 
 .listContainer {
-  border-radius: var(--button-border-radius);
-  border: 3px solid var(--bg-gray);
-  border-top: none;
+  border-top: 3px solid var(--bg-gray);
   overflow: hidden;
-  background-color: var(--bg-gray);
 }
 .searchContainer ul {
   max-height: 30vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .searchContainer li {
-  padding: 0.5rem;
+  padding: 0.5rem var(--small-spacing);
   display: flex;
   align-items: center;
+  border-bottom: 3px solid var(--bg-gray);
+}
+
+.searchContainer li span {
+  flex-grow: 1;
 }
 
 .searchContainer li button {
   display: flex;
   padding: 0.25rem;
-  margin-right: 0.5rem;
   background-color: var(--bg-white);
   color: var(--light-gray);
   border: 2px solid var(--bg-gray);
@@ -66,5 +71,56 @@
   background-color: var(--bg-white);
   border-radius: var(--standard-border-radius);
   border: 3px solid var(--bg-gray);
-  padding: var(--medium-spacing);
+  overflow: hidden;
+}
+
+.tableHeaders {
+  background-color: var(--bg-gray);
+  display: flex;
+  color: var(--text-gray);
+  padding: 0.25rem var(--small-spacing);
+}
+
+.tableHeaders h3 {
+  font-weight: 400;
+}
+
+.nameHeader {
+  flex-grow: 1;
+}
+
+.dataHeader {
+  width: 6rem;
+  text-align: end;
+}
+
+.buttonSpacer {
+  width: 120px;
+}
+
+.tableItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem var(--small-spacing);
+  border-bottom: 3px solid var(--bg-gray);
+}
+
+.deleteButton {
+  display: flex;
+  padding: 0.5rem;
+  background-color: var(--bg-white);
+  color: var(--main-red);
+  border: 2px solid var(--light-red);
+  border-radius: var(--button-border-radius);
+  margin-left: var(--small-spacing);
+  cursor: pointer;
+}
+
+.nameData {
+  flex-grow: 1;
+}
+
+.valueData {
+  width: 6rem;
+  text-align: end;
 }

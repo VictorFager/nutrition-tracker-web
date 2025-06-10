@@ -1,0 +1,28 @@
+/* BOTTOM NAV ================================== */
+
+.bottomNav {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg-white);
+  padding: var(--x-small-spacing);
+  border-top: var(--standard-border-width) solid var(--bg-gray);
+  border-radius: var(--standard-border-radius) var(--standard-border-radius) 0 0;
+  box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bottomNav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iconLink {
+  display: flex;
+  padding: var(--icon-button-padding);
+  border-radius: var(--button-border-radius);
+}
+
+.iconLink.active {
+  background-color: var(--light-green);
+}
