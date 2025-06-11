@@ -103,7 +103,7 @@
 /* TOGGLE BUTTON ============================== */
 
 .toggleButton {
-  bottom: 0;
+  display: none;
   border: none;
   background-color: var(--main-green);
   color: var(--bg-white);
@@ -140,9 +140,8 @@
   }
 }
 
-/* TEMP!!!!!!! TESTING */
-/* @media (min-width: 45rem) {
-  .sideNav .iconLink span {
-    display: inline;
+@media (min-width: 52rem) {
+  .toggleButton {
+    display: flex;
   }
-} */
+}
