@@ -1,0 +1,17 @@
+.main {
+  margin-bottom: var(--bottom-nav-height);
+  padding: var(--small-spacing);
+}
+
+@media (min-width: 40rem) {
+  .main {
+    margin-bottom: 0;
+    padding: var(--medium-spacing);
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .body {
+    display: flex;
+  }
+}

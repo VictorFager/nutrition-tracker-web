@@ -6,6 +6,7 @@
   --light-gray: #aaaaaa;
   --main-green: #6bd39d;
   --light-green: #c0ecd5;
+  --dark-green: #38bc78;
   --gray-green: #aecebd;
   --main-yellow: #de9114;
   --light-yellow: #f2ae41;
@@ -33,7 +34,9 @@
   --menu-item-transition-length: 400ms;
   --quick-fade-transition-length: 300ms;
 
-  --bottom-navbar-height: 4.25rem;
+  --bottom-nav-height: 4.25rem;
+  --side-nav-width: 6.25rem;
+  --side-nav-width-open: 20rem;
 }
 
 html,
@@ -74,14 +77,4 @@ h4,
 h5,
 h6 {
   font-size: inherit;
-}
-
-.icon {
-  width: 2rem;
-  height: 2rem;
-}
-
-/* TEMPORARY !!!!!!!! TA BORT */
-p {
-  padding: 2rem;
 }

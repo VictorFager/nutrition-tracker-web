@@ -2,7 +2,6 @@
   background-color: var(--bg-white);
   border: 3px solid var(--bg-gray);
   border-radius: var(--standard-border-radius);
-  margin: var(--large-spacing);
   padding: var(--medium-spacing) var(--small-spacing);
 }
 

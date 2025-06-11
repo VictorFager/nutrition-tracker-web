@@ -1,7 +1,3 @@
-.mainContainer {
-  margin: var(--large-spacing);
-}
-
 .searchContainer {
   background-color: var(--bg-white);
   border-radius: var(--standard-border-radius);
