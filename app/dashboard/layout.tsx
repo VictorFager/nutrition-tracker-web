@@ -38,6 +38,16 @@ export default function DashboardLayout({
                   Ingredienser
                 </Link>
               </li>
+              <li className={styles.menuItem}>
+                <Link href="/add-ingredient" className={styles.menuLink}>
+                  add ingr.
+                </Link>
+              </li>
+              <li className={styles.menuItem}>
+                <Link href="/calculator" className={styles.menuLink}>
+                  calc.
+                </Link>
+              </li>
             </ul>
           </nav>
           <form>

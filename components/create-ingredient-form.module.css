@@ -2,7 +2,6 @@
   background-color: var(--bg-white);
   border: 3px solid var(--bg-gray);
   border-radius: var(--standard-border-radius);
-  margin: var(--large-spacing);
   padding: var(--medium-spacing) var(--small-spacing);
 }
 
@@ -36,6 +35,10 @@
   padding: 0.75rem 3rem 0.75rem 1rem;
   width: 100%;
   transition: var(--quick-fade-transition-length) ease-in-out;
+}
+
+.pageContent input::placeholder {
+  color: var(--light-gray);
 }
 
 .pageContent input:hover,

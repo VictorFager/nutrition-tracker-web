@@ -1,0 +1,122 @@
+.searchContainer {
+  background-color: var(--bg-white);
+  border-radius: var(--standard-border-radius);
+  border: 3px solid var(--bg-gray);
+  overflow: hidden;
+}
+
+.searchContainer form {
+  padding: var(--small-spacing);
+}
+
+.searchContainer input {
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: var(--button-border-radius);
+  border: 3px solid var(--bg-gray);
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: var(--quick-fade-transition-length) ease-in-out;
+}
+
+.searchContainer input::placeholder {
+  color: var(--light-gray);
+}
+
+.searchContainer input:hover,
+.searchContainer input:focus {
+  border-color: var(--light-green);
+  outline: none;
+}
+
+.listContainer {
+  border-top: 3px solid var(--bg-gray);
+  overflow: hidden;
+}
+.searchContainer ul {
+  max-height: 30vh;
+  overflow-y: auto;
+}
+
+.searchContainer li {
+  padding: 0.5rem var(--small-spacing);
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid var(--bg-gray);
+}
+
+.searchContainer li span {
+  flex-grow: 1;
+}
+
+.searchContainer li button {
+  display: flex;
+  padding: 0.25rem;
+  background-color: var(--bg-white);
+  color: var(--light-gray);
+  border: 2px solid var(--bg-gray);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+.calculatorContainer {
+  margin-top: var(--small-spacing);
+  background-color: var(--bg-white);
+  border-radius: var(--standard-border-radius);
+  border: 3px solid var(--bg-gray);
+  overflow: hidden;
+}
+
+.tableHeaders {
+  background-color: var(--bg-gray);
+  display: flex;
+  color: var(--text-gray);
+  padding: 0.25rem var(--small-spacing);
+}
+
+.tableHeaders h3 {
+  font-weight: 400;
+}
+
+.nameHeader {
+  flex-grow: 1;
+}
+
+.dataHeader {
+  width: 6rem;
+  text-align: end;
+}
+
+.buttonSpacer {
+  width: 120px;
+}
+
+.tableItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem var(--small-spacing);
+  border-bottom: 3px solid var(--bg-gray);
+}
+
+.deleteButton {
+  display: flex;
+  padding: 0.5rem;
+  background-color: var(--bg-white);
+  color: var(--main-red);
+  border: 2px solid var(--light-red);
+  border-radius: var(--button-border-radius);
+  margin-left: var(--small-spacing);
+  cursor: pointer;
+}
+
+.nameData {
+  flex-grow: 1;
+}
+
+.valueData {
+  width: 6rem;
+  text-align: end;
+}

@@ -1,0 +1,147 @@
+/* BOTTOM NAV ================================== */
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: var(--bottom-nav-height);
+  background-color: var(--bg-white);
+  padding: var(--x-small-spacing);
+  border-top: var(--standard-border-width) solid var(--bg-gray);
+  border-radius: var(--standard-border-radius) var(--standard-border-radius) 0 0;
+  box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bottomNav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* SIDE NAV ==================================== */
+
+.sideNav {
+  display: none;
+  flex-direction: column;
+  align-items: normal;
+  background-color: var(--bg-white);
+  padding: var(--small-spacing);
+  width: var(--side-nav-width);
+  border-radius: 0 var(--standard-border-radius) var(--standard-border-radius) 0;
+  border-right: var(--standard-border-width) solid var(--bg-gray);
+  transition: width 600ms ease-out;
+  overflow-x: hidden;
+}
+
+.sideNav.open {
+  width: var(--side-nav-width-open);
+}
+
+.sideNav nav {
+  flex: 1;
+}
+
+.sideNav ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-spacing);
+}
+
+.sideNav .iconLink span {
+  font-size: var(--menu-item-text-size);
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease-out;
+}
+
+.sideNav.open .iconLink span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sideNav .iconLink .menuIcon {
+  margin: var(--x-small-spacing);
+  flex-shrink: 0;
+}
+
+.sideNav .iconLink:hover,
+.sideNav .iconLink:focus-visible {
+  background-color: var(--bg-gray);
+  outline: none;
+}
+
+.sideNav .iconLink:active {
+  background-color: var(--main-green);
+}
+
+/* ICON LINK =================================== */
+
+.menuIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  gap: var(--x-small-spacing);
+  padding: var(--icon-button-padding);
+  border-radius: var(--button-border-radius);
+  -webkit-tap-highlight-color: transparent; /* Removes blue highlight on phones */
+  transition: background-color 400ms ease-out, color 400ms ease-in-out;
+}
+
+.iconLink:active {
+  background-color: var(--bg-gray);
+}
+
+.iconLink.active {
+  color: var(--main-green);
+}
+
+/* TOGGLE BUTTON ============================== */
+
+.toggleButton {
+  display: none;
+  border: none;
+  background-color: var(--main-green);
+  color: var(--bg-white);
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.sideNav .toggleButton:hover,
+.sideNav .toggleButton:focus-visible {
+  background-color: var(--dark-green);
+}
+
+.sideNav .toggleButton:active {
+  background-color: var(--light-green);
+}
+
+.toggleButton .menuIcon {
+  transition: transform 400ms;
+}
+
+.sideNav.open .toggleButton .menuIcon {
+  transform: rotate(-180deg);
+}
+
+/* BREAKPOINTS */
+
+@media (min-width: 40rem) {
+  .bottomNav {
+    display: none;
+  }
+
+  .sideNav {
+    display: flex;
+  }
+}
+
+@media (min-width: 52rem) {
+  .toggleButton {
+    display: flex;
+  }
+}

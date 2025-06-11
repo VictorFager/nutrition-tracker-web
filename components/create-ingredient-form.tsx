@@ -177,7 +177,7 @@ export default function CreateIngredientForm() {
           <p className={styles.generalSuccess}>Ingrediensen lades till!</p>
         )}
         <div className={styles.buttonGroup}>
-          <Link href="/dashboard/home" className={styles.cancelButton}>
+          <Link href="/ingredients" className={styles.cancelButton}>
             Avbryt
           </Link>
           <div className={styles.spacer}></div>
