@@ -131,17 +131,3 @@
   cursor: pointer;
   outline: none;
 }
-
-@media screen and (max-width: 450px) {
-  .pageContent {
-    margin: var(--small-spacing);
-  }
-
-  .pageContent h2 {
-    text-align: center;
-  }
-
-  .buttonGroup {
-    justify-content: space-evenly;
-  }
-}
