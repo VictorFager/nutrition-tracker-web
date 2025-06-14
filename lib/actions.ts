@@ -2,8 +2,10 @@
 
 import { z } from "zod/v4";
 import { neon } from "@neondatabase/serverless";
-
 const sql = neon(`${process.env.DATABASE_URL}`);
+
+// import postgres from "postgres";
+// const sql = postgres(process.env.DATABASE_URL!, { ssl: "require" });
 
 const IngredientFormSchema = z.object({
   description: z.string().nonempty("Ingrediensen måste ha en beskrivning!"),
@@ -97,14 +99,14 @@ export async function createIngredient(
   } else {
     const data = validatedInput.data;
     await sql`
-    INSERT INTO ingredients (ingredient_name, calories_p100g,
-    fat_p100g, saturated_fat_p100g, carbohydrate_p100g, sugar_p100g,
-    fiber_p100g, protein_p100g, salt_p100g)
+    INSERT INTO ingredients (description, calories, 
+    fat, saturated_fat, carbohydrate, sugar, fiber, 
+    protein, salt)
     VALUES (${data.description}, ${data.calories},
-    ${data.fat}, ${data.saturatedFat},
-    ${data.carbohydrate}, ${data.sugar},
-    ${data.fiber}, ${data.protein},
-    ${data.salt})
+    ${data.fat * 1000}, ${data.saturatedFat * 1000},
+    ${data.carbohydrate * 1000}, ${data.sugar * 1000},
+    ${data.fiber * 1000}, ${data.protein * 1000},
+    ${data.salt * 1000})
     `;
   }
 

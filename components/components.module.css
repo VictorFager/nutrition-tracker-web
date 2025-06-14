@@ -128,7 +128,80 @@
   transform: rotate(-180deg);
 }
 
-/* BREAKPOINTS */
+/* CONTAINER ================================== */
+
+.container {
+  background-color: var(--bg-white);
+  border-radius: var(--standard-border-radius);
+  border: var(--standard-border-width) solid var(--bg-gray);
+  overflow: hidden;
+}
+
+/* ITEM TABLE ================================= */
+
+.itemTable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  width: 100%;
+  text-align: right;
+  table-layout: fixed;
+}
+
+.itemTable th {
+  padding: calc(var(--x-small-spacing) / 2) 0;
+  margin-left: var(--x-small-spacing);
+  font-weight: 600;
+  font-size: var(--table-header-text-size);
+}
+
+.itemTable thead {
+  background-color: var(--bg-gray);
+  color: var(--text-gray);
+}
+
+.itemTable th:first-child {
+  width: 40%;
+  padding-left: var(--small-spacing);
+  text-align: left;
+}
+
+.itemTable th:last-child {
+  padding-right: var(--small-spacing);
+}
+
+.itemTable td:first-child {
+  padding-left: var(--small-spacing);
+  text-align: left;
+}
+
+.itemTable td:last-child {
+  padding-right: var(--small-spacing);
+}
+
+.itemTable tbody {
+  padding: 0 10px;
+}
+
+.itemTable td {
+  padding: var(--small-spacing) 0;
+  min-width: 20rem;
+}
+
+.itemTable tr {
+  border-bottom: var(--table-border-width) solid var(--bg-gray);
+}
+
+.itemTable thead tr,
+.itemTable tr:last-child {
+  border-bottom: none;
+}
+
+/* .itemTable tr:nth-of-type(2n) {
+  background: hsl(0 0% 0% / 0.03);
+} */
+
+/* BREAKPOINTS ================================ */
 
 @media (min-width: 40rem) {
   .bottomNav {

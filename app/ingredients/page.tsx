@@ -1,3 +1,9 @@
-export default function Page() {
-  return <p>Ingredients</p>;
+import IngredientTable from "@/components/item-table";
+
+export default function IngredientsPage() {
+  return (
+    <>
+      <IngredientTable />
+    </>
+  );
 }

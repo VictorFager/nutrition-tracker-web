@@ -1,8 +1,8 @@
 :root {
   --bg-white: #fafafa;
   --text-black: #292929;
-  --bg-gray: #e4e4e4;
-  --text-gray: #888888;
+  --bg-gray: #ededed;
+  --text-gray: #949494;
   --light-gray: #aaaaaa;
   --main-green: #6bd39d;
   --light-green: #c0ecd5;
@@ -17,10 +17,12 @@
   --menu-item-text-size: 1.75rem;
   --form-title-text-size: 1.5rem;
   --button-text-size: 1rem;
+  --table-header-text-size: 0.875rem;
 
   --standard-border-radius: 12px;
   --button-border-radius: 8px;
   --standard-border-width: 3px;
+  --table-border-width: 2px;
 
   --x-small-spacing: 0.5rem;
   --small-spacing: 1rem;
