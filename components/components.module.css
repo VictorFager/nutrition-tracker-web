@@ -4,6 +4,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 4;
   height: var(--bottom-nav-height);
   background-color: var(--bg-white);
   padding: var(--x-small-spacing);
@@ -137,9 +138,21 @@
   overflow: hidden;
 }
 
+.container:not(:last-child) {
+  margin-bottom: var(--medium-spacing);
+}
+
 /* ITEM TABLE ================================= */
 
-.itemTable {
+.tableContainer {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: visible;
+}
+
+.table {
+  --table-row-color: var(--bg-white);
+
   border-collapse: collapse;
   border-spacing: 0;
   border: none;
@@ -148,56 +161,75 @@
   table-layout: fixed;
 }
 
-.itemTable th {
-  padding: calc(var(--x-small-spacing) / 2) 0;
-  margin-left: var(--x-small-spacing);
-  font-weight: 600;
-  font-size: var(--table-header-text-size);
-}
-
-.itemTable thead {
+.table th {
   background-color: var(--bg-gray);
   color: var(--text-gray);
+  padding: calc(var(--x-small-spacing) / 2) 0;
+  font-weight: 500;
+  font-size: var(--table-header-text-size);
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
-.itemTable th:first-child {
-  width: 40%;
+.table th:not(:first-child) {
+  width: 5rem;
+}
+
+.table thead {
+  /* position: sticky;
+  left: 0; */
+}
+
+.table th:first-child,
+.table td:first-child {
+  width: 10rem;
   padding-left: var(--small-spacing);
   text-align: left;
+  position: sticky;
+  left: 0;
 }
 
-.itemTable th:last-child {
+.table td:first-child {
+  background-color: var(--table-row-color);
+  z-index: 1;
+}
+
+.table th:first-child {
+  z-index: 3;
+}
+
+.table th:last-child,
+.table td:last-child {
   padding-right: var(--small-spacing);
 }
 
-.itemTable td:first-child {
-  padding-left: var(--small-spacing);
-  text-align: left;
-}
-
-.itemTable td:last-child {
-  padding-right: var(--small-spacing);
-}
-
-.itemTable tbody {
+.table tbody {
   padding: 0 10px;
 }
 
-.itemTable td {
+.table td {
   padding: var(--small-spacing) 0;
-  min-width: 20rem;
 }
 
-.itemTable tr {
+.table tr {
+  position: relative;
+  background-color: var(--table-row-color);
   border-bottom: var(--table-border-width) solid var(--bg-gray);
+  cursor: pointer;
 }
 
-.itemTable thead tr,
-.itemTable tr:last-child {
+.table tr:hover,
+.table tr:focus {
+  --table-row-color: var(--light-bg-gray);
+}
+
+.table thead tr,
+.table tr:last-child {
   border-bottom: none;
 }
 
-/* .itemTable tr:nth-of-type(2n) {
+/* .table tr:nth-of-type(2n) {
   background: hsl(0 0% 0% / 0.03);
 } */
 
@@ -217,4 +249,28 @@
   .toggleButton {
     display: flex;
   }
+}
+
+/* UTILITY CLASSES =========================== */
+
+.flexFull {
+  flex: 1;
+}
+
+.flexNoShrink {
+  flex-shrink: 0;
+}
+
+.fullHeight {
+  max-height: 100%;
+}
+
+.noDisplay {
+  display: none;
+}
+
+/* TEST TEMP!!!!! TA BORT SEN */
+
+.test {
+  padding: var(--small-spacing);
 }
